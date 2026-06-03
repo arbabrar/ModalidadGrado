@@ -1,0 +1,83 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+.body-fixed {
+    max-height: 150px; /* Limita la altura máxima a 200px */
+    overflow-y: auto; /* Activa el scroll vertical cuando el contenido exceda los 200px */
+    display: block; /* Asegura que la tabla respete el alto y el scroll funcione */
+    
+  }
+.body-fixed-min{
+    max-height: 580px; /* Limita la altura máxima a 200px */
+    min-height: 450px;
+    overflow-y: auto; /* Activa el scroll vertical cuando el contenido exceda los 200px */
+    display: block; /* Asegura que la tabla respete el alto y el scroll funcione */
+}
+.title-data{
+    color: rgb(239, 176, 39);
+    font-size: 0.5rem;
+}
+.data{
+    color: rgb(226, 239, 39);
+    font-size: 0.6rem;
+}
+.text-table{
+    font-size: 0.7rem;
+}
+/* Scrollbar básico para navegadores WebKit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 4px;  /* Ancho del scrollbar */
+    height: 4px; /* Altura del scrollbar horizontal */
+}
+
+/* Fondo del track (pista del scrollbar) */
+::-webkit-scrollbar-track {
+    background: #1a1a1a; /* Color oscuro para combinar con el modo oscuro */
+}
+
+/* Thumb (la barra deslizante) */
+::-webkit-scrollbar-thumb {
+    background-color: #cccccc; /* Color claro para contrastar con el fondo oscuro */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Thumb al pasar el mouse */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ffffff; /* Blanco al pasar el mouse para mejor visibilidad */
+}
+
+/* Estilo para Firefox */
+html {
+    scrollbar-width: thin;  /* "thin" hace que el scrollbar sea delgado */
+    scrollbar-color: #cccccc #1a1a1a; /* Color del thumb y del track */
+}
+
+
+
+body{
+    padding: 0;
+    margin: 0;
+    color: white ;
+    font-weight: bold;
+    background: rgb(0,15,22);
+    
+}
+.none{
+    display: block;
+}
+.principal-container{
+    margin-top: 70px;
+}
+.width-25{
+    width:100%;
+}
+.imgcard{
+    height: 100px;
+    width: 100px;
+}
