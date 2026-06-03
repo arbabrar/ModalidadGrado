@@ -32,7 +32,7 @@ RUN composer install \
 
 # Instalar dependencias Node y compilar React/Vite
 COPY package.json package-lock.json* ./
-RUN npm ci
+RUN npm install
 
 COPY . .
 
