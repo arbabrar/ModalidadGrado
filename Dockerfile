@@ -5,7 +5,8 @@ RUN apt-get update && apt-get install -y \
     git unzip zip curl libpq-dev libzip-dev \
     libpng-dev libxml2-dev libonig-dev \
     && docker-php-ext-install \
-        pdo pdo_pgsql zip gd mbstring xml bcmath opcache tokenizer \
+        pdo pdo_pgsql zip gd mbstring xml bcmath \
+    && docker-php-ext-enable opcache \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Composer
