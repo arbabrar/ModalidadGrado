@@ -38,12 +38,9 @@ COPY . .
 
 RUN npm run build
 
-# Cachear configuración de Laravel
-RUN php artisan config:cache || true \
-    && php artisan route:cache || true \
-    && php artisan view:cache || true \
-    && php artisan storage:link || true
+RUN php artisan storage:link || true
 
 EXPOSE 8080
 
-CMD php artisan migrate --force && php -S 0.0.0.0:${PORT:-8080} -t public
+# config:cache se corre en tiempo de inicio (no en build) para que lea las variables de Railway
+CMD php artisan config:cache && php artisan route:cache && php artisan migrate --force && php -S 0.0.0.0:${PORT:-8080} -t public
