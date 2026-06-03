@@ -31,7 +31,7 @@ RUN composer install \
     --ignore-platform-reqs
 
 # Instalar dependencias Node y compilar React/Vite
-COPY package.json package-lock.json* ./
+COPY package.json ./
 RUN npm install
 
 COPY . .
